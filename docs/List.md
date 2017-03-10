@@ -67,8 +67,8 @@ This function accepts the following named parameters:
 | isScrolling | Boolean |  | This field indicates if the list is currently being scrolled or not. |
 | isVisible | Boolean |  | Indicates if the row is visible within the view of the list (eg it is not an overscanned row). |
 | key | String |  | Unique key that should be passed to each `Component`. |
-| parent | object |  | Reference to the parent List (instance). |
-| style | object | ✓ | Style object to be applied to row (to position it). This must be passed and applied through to the rendered `component`. |
+| parent | Object |  | Reference to the parent List (instance). |
+| style | Object | ✓ | Style object to be applied to row (to position it). This must be passed and applied through to the rendered `component`. |
 
 Below is a simple `rowRenderer` example. You can have an external `Component` to render the row.  This `Component` should be provided with  a unique `key`, applies the `style` and has content fitting within `rowHeight`.
 
