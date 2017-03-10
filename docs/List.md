@@ -60,7 +60,7 @@ This method can be used to safely scroll back to a cell that a user has scrolled
 
 Responsible for rendering a single row, given its index.
 This function accepts the following named parameters:
-### Parameters
+#### Parameters
 | Parameters | Type | Required? | Description |
 |:---|:---|:---:|:---|
 | index | Number |  | This is the index of the row that should be rendered. |
