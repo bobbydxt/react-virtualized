@@ -60,16 +60,26 @@ This method can be used to safely scroll back to a cell that a user has scrolled
 
 Responsible for rendering a single row, given its index.
 This function accepts the following named parameters:
+### Parameters
+| Parameters | Type | Required? | Description |
+|:---|:---|:---:|:---|
+| index | Number |  | This is the index of the row that should be rendered. |
+| isScrolling | Boolean |  | This field indicates if the list is currently being scrolled or not. |
+| isVisible | Boolean |  | Indicates if the row is visible within the view of the list (eg it is not an overscanned row). |
+| key | String |  | Unique key that should be passed to each `Component`. |
+| parent | object |  | Reference to the parent List (instance). |
+| style | object | ✓ | Style object to be applied to row (to position it). This must be passed and applied through to the rendered `component`. |
+
+Below is a simple `rowRenderer` example. You can have an external `Component` to render the row.  This `Component` should be provided with  a unique `key`, applies the `style` and has content fitting within `rowHeight`.
 
 ```jsx
 function rowRenderer ({
-  index,       // Index of row
-  isScrolling, // The List is currently being scrolled
-  isVisible,   // This row is visible within the List (eg it is not an overscanned row)
-  key,         // Unique key within array of rendered rows
-  parent,      // Reference to the parent List (instance)
-  style        // Style object to be applied to row (to position it);
-               // This must be passed through to the rendered row element.
+  index,       
+  isScrolling,
+  isVisible,   
+  key,         
+  parent,      
+  style        
 }) {
   const user = list[index]
 
